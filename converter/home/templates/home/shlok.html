@@ -1,0 +1,418 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Layout</title>
+<link rel="icon" href="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" type="image/x-icon">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, 
+
+initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, 
+
+initial-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+       <script 
+
+src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jque
+
+ry.min.js"></script>
+ <script type="text/javascript" src=final.js></script>
+    <script
+        src="http://maps.googleapis.com/maps/api/js?
+
+key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
+    </script>
+   
+<link rel="stylesheet" 
+
+href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" 
+
+href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" 
+
+href="https://cdnjs.cloudflare.com/ajax/libs/font-
+
+awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-
+
+serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background:#F39C12;}
+/* Add a left margin to the "page content" that matches the 
+
+width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-
+
+left: 0}}
+    body{
+            background-image: url("{% static 'home/img/new.jpg' %}");
+            background-blend-mode:lighten;
+            
+        }
+
+    #vin{
+            
+            backface-visibility: 30%;
+        }
+    h2{
+            color:black;
+      }
+    .text{
+        
+             font-weight:900;
+             font-family: fantasy;
+             font-style: italic;
+    
+        
+         }
+    
+
+      /* .aside{
+           padding-left: 50px;
+        
+           
+           
+           
+       }  
+       .bside{
+           padding-left: 50px;
+        
+       }
+       #ayur{
+           color: black;
+           font-family:inherit;
+           font-size: 25px;
+       }
+        #modern{
+           color: black;
+           font-family: inherit;
+           font-size: 25px;
+       }
+       #inputPounds{
+           background-color:#CEE32C;
+           padding: 2px;
+          
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+       #inputKg{
+             background-color:#CEE32C;
+           padding: 2px;
+           
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+       #chose1{
+              background-color:#CEE32C;
+           padding: 2px;
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+        #chose2{
+              background-color:#CEE32C;
+           padding: 2px;
+
+    
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }*/
+    h6{
+        text-align: justify;
+        text-indent: 50px;
+    }
+    div.img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+
+div.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+}
+</style>
+<body>
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small 
+
+w3-hide-medium w3-center">
+  <!-- Avatar image in top left corner -->   
+  <a href="/home"><img src="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" style="width:100%"></a>
+  <a href="/home" class="w3-bar-item w3-button w3-padding-
+
+large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="/home/#about" class="w3-bar-item w3-button w3-
+
+padding-large w3-hover-black">
+    <i class="fa fa-cogs w3-xxlarge"></i>
+    <p>Unit converter</p>
+  </a>
+  <a href="/home/#photos" class="w3-bar-item w3-button w3-
+
+padding-large w3-hover-black">
+    <i class="fa fa-search w3-xxlarge"></i>
+    <p>Explore</p>
+  </a>
+  <a href="/home/#contact" class="w3-bar-item w3-button w3
+
+-padding-large w3-hover-black ">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>Contact us</p>
+  </a>
+  <a href="/home/contact" class="w3-bar-item w3-button w3-
+
+padding-large w3-hover-black ">
+    <i class="fa fa-male w3-xxlarge"></i>
+    <p>Query</p>
+  </a>
+
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large 
+
+screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" 
+
+id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-
+
+off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" 
+
+style="width:25% !important">Home</a>
+    <a href="#about" class="w3-bar-item w3-button" 
+
+style="width:25% !important">Unit Converter</a>
+    <a href="#photos" class="w3-bar-item w3-button" 
+
+style="width:25% !important">Explore</a>
+    <a href="#contact" class="w3-bar-item w3-button" 
+
+style="width:25% !important">Contact us</a>
+  </div>
+</div>
+  <div class="w3-center w3-text-black w3-tooltip w3-borders 
+
+">
+     <h1>ARAVINDASAVA:</h1>
+      <p style="margin-left: 500px;margin-right: 450px;">
+          
+Arvindmushiranch kashmareen neelmutpalam.
+manjisthela balamansirambhuj sareevaan shivam.
+vibhitakvachadhatri shati shyama sanilineem.
+patolam parpatam partham madhukam madhukam muram.
+palmanen sanghrayam drakshaya drakshaya
+<script type="text/javascript">
+function AlertIt2() {
+var answer = confirm ("Palvinshtim is equals to 20 PAL=960grams.")
+if (answer)
+window.location="#";
+}
+</script>
+
+<a href="javascript:AlertIt2();"> palvinshtim</a>
+dhataki <script type="text/javascript">
+function AlertIt4() {
+var answer = confirm ("Truladh is equals to 1/2 TULA=2Kg 400grams")
+if (answer)
+window.location="#";
+}
+</script>
+
+<a href="javascript:AlertIt4();">truladh</a>
+<script type="text/javascript">
+function AlertIt5() {
+var answer = confirm ("Shodshapalam is equals to 16 PAL=768grams")
+if (answer)
+window.location="#";
+}
+</script>
+
+<a href="javascript:AlertIt5();">shodshaplam</a> 
+
+jaldrondravya shipet.
+shakrayastulam tatra <script type="text/javascript">
+function AlertIt4() {
+var answer = confirm ("Truladh is equals to 1/2 TULA=2Kg 400grams")
+if (answer)
+window.location="#";
+}
+</script>
+
+<a href="javascript:AlertIt4();">truladh</a> mashiksya ch.
+masam sanstapayedrande mrutikaprinirmite.
+balanam sarvaroghno balpustayanivardhan.
+arvindasav prokt ayusho grhadoshatah.
+brijya ratnavali balroghadhikar. 
+      </p>
+    </div>
+   <div>
+          
+    <div class="w3-center w3-text-black w3-tooltip w3-
+
+borders ">
+          <h1>Ashwagandharishta:</h1>
+      <p style="margin-left: 500px;margin-right: 450px;">
+<script type="text/javascript">
+function AlertIt1() {
+var answer = confirm ("Truladh is equals to 1/2 TULA=2Kg 400grams")
+if (answer)
+window.location="#";
+}
+</script>
+
+<a href="javascript:AlertIt1();">Truladh</a> 
+
+sasvagandhayamusleaha palvinshtim.
+manghitaya hariktya rajnyomradukasya ch.
+rasnavidhari parthanam mustaktrivartorapi.
+bhagan tash palan dadyadanantashayamyostha.
+chandandvatiysyapi vachayaschitra kasya ch.
+bhaganstyapalan shunannashtdronemabhyas pachet.
+dronsheshe kashayesmin pute shite pradapyet.
+dhatkya 
+
+
+
+<script type="text/javascript">
+function AlertIt2() {
+var answer = confirm ("Shodshaplam is equals to 16 PAL=768grams")
+if (answer)
+window.location="#";
+}
+</script>
+
+<a href="javascript:AlertIt2();">shodshaplam</a>
+mashikasya tulatrayam.
+vyosham tu dvipalam graham trijatak <script 
+
+type="text/javascript">
+function AlertIt3() {
+var answer = confirm ("Chatupalam is equals to 4 PAL=192grams")
+if (answer)
+window.location="#";
+}
+</script>
+
+<a href="javascript:AlertIt3();">chatupalam</a>
+pridagoshach dvipalam nagkeshram.
+masadudvam pivedanam palardparimanatah.
+murchapsmritim shoshmunmadampi darunam.
+karshamashasi mandtvmagnevartbhavan gadan.
+ashvagandhadayristo pito hasyadanshyam.
+        </p>
+    </div>
+    
+    
+     
+    
+        
+    
+    
+    
+    
+    
+    
+    
+    
+      
+   </div>
+  
+  
+  
+  
+  
+   <div class="w3-padding-64 w3-content w3-text-black" 
+
+id="contact">
+    <h1 class="w3-text-black w3-content w3-justify w3-
+
+text-black" style="margin-top: 100px">Contact Us:</h1>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-black 
+
+w3-xxlarge w3-margin-right"></i><a 
+
+href="https://www.google.co.in/maps/place/SKIT/@26.8230523,
+
+75.8651642,17z/data=!3m1!4b1!4m5!3m4!
+
+1s0x396db770070b115f:0x6f306afd08a3e737!8m2!3d26.8230475!
+
+4d75.8673529" target="_blank">SKIT ,Jaipur</a></p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-
+
+xxlarge w3-margin-right"></i> Phone: 1800-200-5111</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-
+
+xxlarge w3-margin-right"> </i> Email: info@skit.com</p>
+    </div><br>
+
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-black w3
+
+-xlarge">
+   <a href="https://m.facebook.com/skitjaipurdeals/"> <i 
+
+class="fa fa-facebook-official w3-hover-opacity"></i></a>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a 
+
+href="https://www.w3schools.com/w3css/default.asp" 
+
+target="_blank" class="w3-hover-text-
+
+black">TECHNOCRATS</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+
+
+
+
+</body>
+</html>

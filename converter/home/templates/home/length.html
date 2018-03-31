@@ -1,0 +1,179 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+   
+    <title>weight and measure</title>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+ <script type="text/javascript" src="ayur.js"></script>
+    <script
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
+    </script>
+   
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background:#F39C12;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    .table{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    body{
+            background-image: url("{% static 'home/img/new.jpg' %}");
+            background-blend-mode:lighten;
+        }
+
+    
+    
+    
+      </style>  
+    
+    
+    
+    
+    
+    
+  </head>
+  <body style="margin-bottom: 40px">
+  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <a href="/home"><img src="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" style="width:100%"></a>
+  <a href="/home"class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="/home/#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-cogs w3-xxlarge"></i>
+    <p>Unit Conveter</p>
+  </a>
+  <a href="/home/#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-search w3-xxlarge"></i>
+    <p>Explore</p>
+  </a>
+  <a href="/home/#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>Contact us</p>
+  </a>
+  <a href="/home/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-male w3-xlarge"></i>
+    <p>Query</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
+    <a href="index.html#about" class="w3-bar-item w3-button" style="width:25% !important">Unit Converter</a>
+    <a href="index.html#photos" class="w3-bar-item w3-button" style="width:25% !important">Explore</a>
+    <a href="index.html#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact us</a>
+  </div>
+</div>
+
+
+        
+              
+
+    
+
+   
+   <div class="w3-content w3-justify w3-text-black w3-padding-24" style="background-color:#FFFF99;
+    box-sizing: border-box; padding:30px 30px 30px 30px">
+      
+       <div style="padding-top: 5px;
+    padding-bottom: 12px;
+    padding-right: 50px;
+    padding-left: 10px; color: darkred;">
+           
+           <h3 style="font-family:arial;color:darkred;font-size:30px;">Linear Measurement:</h3>
+           </div>
+         
+        
+        
+      
+         
+     <table class="w3-table w3-bordered" style="height: auto;" >
+           <thead style="background: #FF8C00;">
+               <tr>
+                   <th>Ayurveda Units&nbsp;&nbsp;&nbsp;&nbsp; </th>
+                   <th>ISI Units (Charaka)&nbsp;&nbsp;&nbsp;</th>
+                   <th>ISI Units (Sushruta)&nbsp;&nbsp;&nbsp;</th>
+                   <th>ISI Units (Sharangadhara)&nbsp;&nbsp;&nbsp;</th>
+                   <th>ISI Units (RRS)&nbsp;&nbsp;&nbsp;</th>
+                   <th>ISI Units (Vaidyaka paribhasha pradeepa)&nbsp;&nbsp;&nbsp;</th>
+                   <th>ISI Unit (API)&nbsp;&nbsp;</th>
+                   
+               </tr>
+         </thead>
+            <tbody>
+                 <tr class="w3-hover-white ">  <td> YAVODARA  </td><td>    </td><td>    </td><td>     </td><td>    </td><td>     </td><td> 0.24 cm     </td></tr>
+               <tr class="w3-hover-white ">  <td>ANGULA   </td><td>    </td><td>    </td><td>     </td><td>    </td><td>     </td><td>    1.95 cm  </td></tr>
+               <tr class="w3-hover-white ">  <td> VITASTI  </td><td>    </td><td>    </td><td>     </td><td>    </td><td>     </td><td> 22.86 cm     </td></tr>
+               <tr class="w3-hover-white ">  <td> ARATNI  </td><td>    </td><td>    </td><td>     </td><td>    </td><td>     </td><td>    41.91 cm  </td></tr>
+               <tr class="w3-hover-white ">  <td>  HASTA </td><td>    </td><td>    </td><td>     </td><td>    </td><td>     </td><td>    45.72 cm  </td></tr>
+               <tr class="w3-hover-white ">  <td>  NRIPA HASTA </td><td>    </td><td>    </td><td>     </td><td>    </td><td>     </td><td>  55.88 cm    </td></tr>
+               <tr class="w3-hover-white ">  <td> RAJHASTA  </td><td>    </td><td>    </td><td>     </td><td>    </td><td>     </td><td>   55.88 cm   </td></tr>
+               <tr class="w3-hover-white ">  <td> VYAMA  </td><td>    </td><td>    </td><td>     </td><td>    </td><td>     </td><td>    182.88 cm  </td></tr>
+         </tbody>
+        
+       </table>
+    
+      </div>
+    <script>
+        function myfun(){
+            
+              var x = document.getElementById("myDIV");
+    if (x.style.display === "Heelo ") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+        }
+      
+      </script>
+         <div class="w3-padding-64 w3-content w3-text-black" id="contact">
+    <h1 class="w3-text-black w3-content w3-justify w3-text-black" style="margin-top: 100px">Contact Us:</h1>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i><a href="https://www.google.co.in/maps/place/SKIT/@26.8230523,75.8651642,17z/data=!3m1!4b1!4m5!3m4!1s0x396db770070b115f:0x6f306afd08a3e737!8m2!3d26.8230475!4d75.8673529" target="_blank">SKIT ,Jaipur</a></p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: 1800-200-5111</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: info@skit.com</p>
+    </div><br>
+
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-black w3-xlarge">
+   <a href="https://m.facebook.com/skitjaipurdeals/"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-black">TECHNOCRATS</a></p>
+  <!-- End footer -->
+  </footer>
+
+   
+  </body>
+</html>

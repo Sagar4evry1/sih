@@ -1,0 +1,89 @@
+{% load static %}
+body{
+            background-image: url({% static "home/img/new.jpg" %});
+            background-blend-mode:lighten;
+            
+        }
+
+    #vin{
+            
+            backface-visibility: 30%;
+        }
+    h2{
+            color:black;
+      }
+    .text{
+        
+             font-weight:900;
+             font-family: fantasy;
+             font-style: italic;
+    
+        
+         }
+    
+
+      /* .aside{
+           padding-left: 50px;
+        
+           
+           
+           
+       }  
+       .bside{
+           padding-left: 50px;
+        
+       }
+       #ayur{
+           color: black;
+           font-family:inherit;
+           font-size: 25px;
+       }
+        #modern{
+           color: black;
+           font-family: inherit;
+           font-size: 25px;
+       }
+       #inputPounds{
+           background-color:#CEE32C;
+           padding: 2px;
+          
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+       #inputKg{
+             background-color:#CEE32C;
+           padding: 2px;
+           
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+       #chose1{
+              background-color:#CEE32C;
+           padding: 2px;
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+        #chose2{
+              background-color:#CEE32C;
+           padding: 2px;
+
+    
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }*/
+    h6{
+        text-align: justify;
+        text-indent: 50px;
+    }

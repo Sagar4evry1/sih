@@ -1,0 +1,293 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Ministry of ayush</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+ <script type="text/javascript" src="{% static 'home/js/final.js' %}"></script>
+    <script
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
+    </script>
+   
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background:#F39C12;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    body{
+            background-image: url("{% static 'home/img/new.jpg' %}");
+            background-blend-mode:lighten;
+            
+        }
+
+    #vin{
+            
+            backface-visibility: 30%;
+        }
+    h2{
+            color:black;
+      }
+    .text{
+        
+             font-weight:900;
+             font-family: fantasy;
+             font-style: italic;
+    
+        
+         }
+    
+
+      
+    h6{
+        text-align: justify;
+        text-indent: 50px;
+    }
+    div.img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+
+div.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+}
+</style>
+<body>
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <a href="/home"><img src="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" style="width:100%"></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-cogs w3-xlarge"></i>
+    <p>Unit converter</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-search w3-xlarge"></i>
+    <p>Explore</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-envelope w3-xlarge"></i>
+    <p>Contact us</p>
+  </a>
+   <a href="/home/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-male w3-xlarge"></i>
+    <p>Ask Query</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Unit Converter</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">Explore</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact us</a>
+    <a href="/home/contact" class="w3-bar-item w3-button" style="width:25% !important">Ask Query</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-12 w3-center" id="vin">
+      <h1 class="w3-xxlarge w3-center w3-animate-top"><span>आयुष मंत्रालय<br>MINISTRY OF AYUSH</span></h1>
+      <p>भारत सरकार</p>
+      
+<div class="w3-content w3-section" >
+  <img class="mySlides w3-round" src="{% static 'home/img/addtext_com_MTIyMjU1NDIwNQ.jpg' %}" style="width:100%">
+  <img class="mySlides w3-round" src="{% static 'home/img/ayurveda.jpg' %}" style="width:100%">
+  <img class="mySlides w3-round" src="{% static 'home/img/ayurveda_medicines_2.jpg' %}"s style="width:100%">
+</div>
+    </header>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-black w3-padding-64 " id="#">
+    <h1 class="w3-text-black">About us:</h1>
+    <hr style="width:200px" class="w3-opacity">
+    <h6 class="w3-text-black w3-padding-64 w3-border" style="background:#FFFF66">The Ministry of AYUSH was formed on 9th November 2014 to ensure the optimal development and propagation of AYUSH systems of health care. Earlier it was known as the Department of Indian System of Medicine and Homeopathy (ISM &H) which was created in March 1995 and renamed as Department of Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homoeopathy (AYUSH) in November 2003, with focused attention for development of Education and Research in Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homoeopathy.
+    </h6>
+    </div>
+    <!-- Unit converter -->
+    
+    <div class="w3-padding-64 w3-content w3-text-black " id="about">
+    
+     <h1 class="w3-text-black w3-content w3-justify w3-text-black">Ayurveda Unit Converter:</h1>
+     <hr style="width:200px color:black" class="w3-opacity">
+     <div class="w3-container w3-border"style="border-color: black">
+          <h1 id="su"></h1>
+           <form class="w3-form">
+         
+  <label for="Ayurvaeda" id="ayur">Ayurveda:</label>
+  <input id="inputPounds"  class="w3-input w3-border"style="width:20%" type="number" placeholder="Ayurveda" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+   <select class="w3-select w3-border" style="width: 20%" name="chose1 "id="chose1"onchange="myfunction()">
+            
+            <option  name="PARMANU"   value="A">PARMANU</option>
+            <option name ="DHAVANSHI"  value="B">DHAVANSHI</option>
+            <option name="MARICHI"   value="C">MARICHI</option>
+            <option  name="LAL SARSHAP"  value="D">LAL SARSHAP&nbsp;</option>
+             <option name="TUNDAL"       value="H" >TUNDAL</option>
+            <option name="DHANYAMASH"   value="I">DHANYAMASH</option>
+             <option name="YAVA"        value="J">YAVA</option>
+             <option name="RATTI"        value="RA">RATTI</option>
+            <option  name="ANDIKA"      value="K">ANDIKA</option>
+            <option name="MASHAK"       value="L" >MASHAK</option>
+            <option name="SHAAN"        value="M">SHAAN</option>
+             <option name="KOL"         value="N">KOL</option>
+            <option  name="TOLA"        value="O">TOLA</option>
+            <option name="KARSHA"       value="P" >KARSHA</option>
+            <option name="SHUKTI"       value="Q">SHUKTI</option>
+             <option name="PAL"         value="R">PAL</option>
+            <option  name="CHHATANK"    value="S">CHHATANK</option>
+            <option name="PRASRTIS"     value="T" >PRASRTIS</option>
+            <option name="CHHATAAK"     value="U">CHHATAAK</option>
+            <option name="KUDAV"        value="V">KUDAV</option>
+            <option  name="MANIKA"      value="W">MANIKA</option>
+            <option name="PRASTHA"      value="X" >PRASTHA</option>
+            <option name="SER"          value="Y">SER</option>
+            <option name="ADHAKA"       value="Z">ADHAKA</option>
+             <option  name="TULA"       value="AA">TULA</option>
+            <option  name="DRONA"       value="AB">DRONA</option>
+            <option name="SURPA"        value="AC" >SURPA</option>
+            <option name="DRONI"        value="AD">DRONI</option>
+             <option name="BHARA"       value="AE">BHARA</option>
+            <option  name="KHARI"       value="AF">KHARI</option>
+        </select>
+    
+<br>
+
+<label for="Modern" id="modern">Modern:&nbsp;&nbsp;&nbsp;</label>
+
+<input id="inputKg" class="w3-input  w3-border"style="width:20%" type="number" placeholder="Modern" oninput="weightConverter1(this.value)" onchange="weightConverter1(this.value)" onkeyup="myfunction1()">
+<select class="w3-select w3-border " style="width:20% "id="chose2" onchange="myfunction1()">
+            
+    <option value="E">MILIGRAM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+            <option value="F">GRAM            </option>
+             <option value="G">KILOGRAM      </option>
+        </select>
+    
+
+    </form>
+     </div>
+  
+    </div>
+  <!-- History Section -->
+   <div class="w3-padding-64 w3-content w3-text-black " id="photos">
+    
+     <h1 class="w3-text-black w3-content w3-justify w3-text-black">Explore:</h1>
+     <hr style="width:200px" class="w3-opacity">
+     <div class="img">
+  <a href="/home/history">
+    <img src="{% static 'home/img/logo.jpeg' %}" alt="History" width="110" height="90">
+  </a>
+  
+</div>
+<div class="img">
+  <a href="/home/weight">
+    <img src="{% static 'home/img/weightandmeasure.jpeg' %}" alt="Weight & Measure" width="110" height="90">
+  </a>
+ 
+</div>
+<div class="img">
+  <a href="/home/time">
+    <img src="{% static 'home/img/time.png' %}" alt="Time" width="110" height="90">
+  </a>
+  
+</div>
+
+<div class="img">
+  <a href="/home/length">
+    <img src="{% static 'home/img/linear.png' %}" alt="Linear" width="110" height="90">
+  </a>
+  
+</div>
+<div class="img">
+  <a href="/home/contact">
+    <img src="{% static 'home/img/ask.png' %}" alt="Linear" width="110" height="90">
+  </a>
+  
+</div>
+
+
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-black " id="contact">
+    <h2 class="w3-text-black">Contact Us:</h2>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+      <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> SKIT ,Jaipur</p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: 04045967059</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email:info@skit.com</p>
+    </div><br>
+
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-black w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-black">TECHNOCRATS</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>

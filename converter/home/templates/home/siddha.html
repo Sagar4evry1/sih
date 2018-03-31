@@ -1,0 +1,314 @@
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+    <title>Ayurveda to Modern Weight Converter</title>
+<meta charset="utf-8">
+        <meta charset="utf-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+<style>
+    p{
+        margin: 40px;
+        padding-left: 50px;
+    }
+        
+    input{
+        padding: 10px;
+    }
+    select{
+        padding: 10px;
+    }
+    label{
+    padding: 10px;
+        font-size: 32px;
+    }
+        </style>
+        
+    </head>
+
+<body>
+
+
+
+    
+   <div id="main" style="border: 1px solid black;background-color: orange;border-radius: 20px;">
+
+       
+       <h1 id="head1" style="color: firebrick;text-align: center; font-style: normal;">Weight Converter</h1>
+
+ 
+    
+    
+
+
+
+
+
+<div class="form-a" id="f1">
+
+            <p >
+                 <label>Ayurveda&nbsp;&nbsp;</label>
+                 <input id="text1" type="number" placeholder="Ayurveda"  onchange="weightConverter(this.value)" oninput="weightConverter(this.value)" >
+                
+                
+                <select class="chosen" id="drop2" onchange="myfunction()">
+                 <option  name="YAVAM"   value="A">YAVAM</option>
+                 <option name ="KUNRI"  value="B">KUNRI</option>
+                 <option name="MASAM"   value="C">MASAM</option>
+                 <option  name="MANCADI"  value="D">MANCADI&nbsp;</option>
+                </select>
+            </p>
+
+            <p>
+                 <label> Modern &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                 <input id="text2"  type="text" placeholder="modern"   disabled>
+               <select id="drop3" onchange="myfunction()">
+                 <option value="E" selected="yes">MG</option>
+                 <option value="F">GM</option>
+                 <option value="G">KG</option>
+               </select>
+            </p>
+     </div>
+     
+     
+    
+    
+</div> 
+    
+    
+    
+<script>
+    
+    
+   
+
+
+    
+$(document).ready(function() {
+  $('input[name=radiobutton]:radio').change(function(e) {
+    let value = e.target.value.trim()
+
+    $('[class^="form"]').css('display', 'none');
+
+    switch (value) {
+      case '1':
+        $('.form-a').show()
+        break;
+      case '2':
+        $('.form-b').show()
+        break;
+        case '3':
+        $('.form-c').show()
+        break;
+        case '4':
+        $('.form-d').show()
+        break;
+
+
+    }
+  })
+})
+
+    
+    
+function weightConverter(valNum) {
+
+
+var choseval = $("#drop2").val();
+    
+if(choseval == "A")
+            {
+            var convert=$("#drop3").val();
+
+
+                           if(convert=="E")
+                            {
+                                                        
+                             document.getElementById("text2").value=myFunction((valNum*32.5).toString());
+                            }
+
+
+                            if(convert=="F")
+                            {
+                                document.getElementById("text2").value=myFunction((valNum*0.0325).toString());
+                            
+                            }
+
+
+                            if(convert=="G")
+                            {
+                            document.getElementById("text2").value=myFunction((valNum*0.0000325).toString());
+
+                            
+                            }
+            }
+    
+    
+    
+if(choseval == "B")
+        {
+                   var convert=$("#drop3").val();
+                   
+                    if(convert=="E")
+                    {
+                    document.getElementById("text2").value=myFunction((valNum*130).toString());
+                    
+                    }
+            
+                    
+                    if(convert=="F")
+                    {
+                        document.getElementById("text2").value=myFunction((valNum*0.130).toString());
+                    }
+                    
+            
+                    if(convert=="G")
+                    {
+                                                document.getElementById("text2").value=myFunction((valNum*0.000130).toString());
+                    
+                    }
+        }
+    
+    
+if(choseval == "C")
+                {
+
+                    var convert=$("#drop3").val();
+                   
+                    
+                    if(convert=="E")
+                {
+                                            document.getElementById("text2").value=myFunction((valNum*780).toString());
+                
+                }
+                    
+                    
+                if(convert=="F")
+                {
+                                            document.getElementById("text2").value=myFunction((valNum*0.780).toString());
+                
+                }
+                    
+                if(convert=="G")
+                {
+                                            document.getElementById("text2").value=myFunction((valNum*0.000780).toString());
+
+                    
+                }
+                    
+        }
+
+
+        
+if(choseval == "D")
+                {
+                        
+                    var convert=$("#drop3").val();
+                   
+                    
+                        if(convert=="E")
+                        {
+                                                                document.getElementById("text2").value=myFunction((valNum*260).toString());
+
+                        }
+                        if(convert=="F")
+                        {
+                                                                document.getElementById("text2").value=myFunction((valNum*0.260).toString());
+                        }
+                        if(convert=="G")
+                        {
+                                                 document.getElementById("text2").value=myFunction((valNum*0.000260).toString());
+
+                        
+                        }
+                }
+          
+}//WEIGHT CONVERTER CLOSED
+
+
+
+function myFunction(str1) {
+ 
+    
+     var str = str1;
+    var res = str.split("");
+     var len= str.length;
+    var i;
+    
+    for(i=0;i<len;i++)
+    {
+       if(res[i]=="1")
+       res[i]="१";
+       
+       else if(res[i]=="2")
+       res[i]="२";
+       
+       else if(res[i]=="3")
+       res[i]="३";
+       
+       else if(res[i]=="4")
+       res[i]="४";
+       
+       else if(res[i]=="5")
+       res[i]="५";
+       
+       else if(res[i]=="6")
+       res[i]="६";
+       
+       else if(res[i]=="7")
+       res[i]="७";
+       
+       else if(res[i]=="8")
+       res[i]="८";
+       
+       else if(res[i]=="9")
+       res[i]="९";
+       
+       else if(res[i]==".")
+       res[i]=".";
+       
+       else if(res[i]=="e")
+       res[i]="e";
+       
+       
+       else if(res[i]=="-")
+       res[i]="-";
+       
+       
+       else if(res[i]=="+")
+       res[i]="+";
+       
+       else res[i]="०";
+       
+}
+        
+        return (res.join(""));
+  
+    
+    
+  
+ 
+}
+
+
+function  myfunction(){
+var value1 = $("#text1").val();
+    
+
+    
+weightConverter(value1);
+    
+  
+}
+
+</script>
+
+    
+    
+    
+    
+    
+    
+</body>
+</html>

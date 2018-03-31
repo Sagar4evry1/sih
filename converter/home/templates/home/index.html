@@ -1,0 +1,332 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Ministry of ayush</title>
+<link rel="icon" href="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+ <script type="text/javascript" src=final.js></script>
+    <script
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
+    </script>
+   
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background:#F39C12;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    body{
+            background-image: url("{% static 'home/img/new.jpg' %}");
+            background-blend-mode:lighten;
+            
+        }
+
+    #vin{
+            
+            backface-visibility: 30%;
+        }
+    h2{
+            color:black;
+      }
+    .text{
+        
+             font-weight:900;
+             font-family: fantasy;
+             font-style: italic;
+    
+        
+         }
+    
+
+      /* .aside{
+           padding-left: 50px;
+        
+           
+           
+           
+       }  
+       .bside{
+           padding-left: 50px;
+        
+       }
+       #ayur{
+           color: black;
+           font-family:inherit;
+           font-size: 25px;
+       }
+        #modern{
+           color: black;
+           font-family: inherit;
+           font-size: 25px;
+       }
+       #inputPounds{
+           background-color:#CEE32C;
+           padding: 2px;
+          
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+       #inputKg{
+             background-color:#CEE32C;
+           padding: 2px;
+           
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+       #chose1{
+              background-color:#CEE32C;
+           padding: 2px;
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+        #chose2{
+              background-color:#CEE32C;
+           padding: 2px;
+
+    
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }*/
+    h6{
+        text-align: justify;
+        text-indent: 50px;
+    }
+    div.img {
+    margin: 5px;
+    padding: 25px;
+    border: 1px solid #F39C12;
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+
+div.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+}
+</style>
+<body>
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->   
+  <a href="/home"><img src="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" style="width:100%"></a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-cogs w3-xlarge"></i>
+    <p>Unit converter</p>
+  </a>
+  <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-search w3-xlarge"></i>
+    <p>Explore</p>
+  </a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-envelope w3-xlarge"></i>
+    <p>Contact us</p>
+  </a>
+   <a href="/home/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-male w3-xlarge"></i>
+    <p>Query</p>
+  </a>
+   <a href="https://vipmanagement.in/vidc" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-camera w3-xlarge"></i>
+    <p>Video call</p>
+  </a>
+  <a href="/home/sloka" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-bed w3-xlarge"></i>
+    <p>medicine</p>
+  </a>
+   <a href="/home/hindi" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-pencil w3-xlarge"></i>
+    <p>hindi converter</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Unit Converter</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">Explore</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact us</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-large" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-12 w3-center" id="vin">
+      <h1 class="w3-xxlarge w3-center w3-animate-top"><span>आयुष मंत्रालय<br>MINISTRY OF AYUSH</span></h1>
+      <p>भारत सरकार</p>
+      
+<div class="w3-content w3-section" >
+  <img class="mySlides w3-round" src="{% static 'home/img/ayurveda-wallpapers-high-quality-For-Free-Wallpaper.jpg' %}" style="width:100%;border-radius :25px;height:400px; ">
+  <img class="mySlides w3-round" src="{% static 'home/img/ayurveda.jpg' %}" style="width:100%;border-radius : 25px;height: 400px;">
+  <img class="mySlides w3-round" src="{% static 'home/img/ayurveda_medicines_2%20(2).jpg' %}" style="width:100%;border-radius :25px;height: 400px">
+   <img class="mySlides w3-round" src="{% static 'home/img/10ayurveda-banner.jpg' %}" style="width:100%;border-radius :25px;height: 400px">
+   <img class="mySlides w3-round" src="{% static 'home/img/Yoga-keeps-you-fit-HD-wallpaper-collectiondownload-10.jpg' %}" style="width:100%;border-radius :25px;height: 400px">
+</div>
+    </header>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+  <!-- About Section -->
+ <div class="w3-content w3-justify w3-text-black w3-padding-64"  id="#">
+    <h1 class="w3-text-black">About us:</h1>
+    <hr style="width:200px" class="w3-opacity">
+    
+   <div class="w3-container" style="background:#B2F362;border-radius: 20px;font-size: 20px;text-indent: 110px"> <p style="padding: 20px"class="w3-text-black">The Ministry of AYUSH was formed on 9th November 2014 to ensure the optimal development and propagation of AYUSH systems of health care. Earlier it was known as the Department of Indian System of Medicine and Homeopathy (ISM & H) which was created in March 1995 and renamed as Department of Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homoeopathy (AYUSH) in November 2003, with focused attention for development of Education and Research in Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homoeopathy.
+    </p>
+    </div>
+    </div>
+    <!-- Unit converter -->
+    
+    <div class="w3-padding-64 w3-content w3-text-black" id="about">
+    
+     <h1 class="w3-text-black w3-content w3-justify w3-text-black ">Ayurveda Unit Converter:</h1>
+     <hr style="width:200px color:black" class="w3-opacity">
+     <div class="w3-container">
+        <div class="img">
+  <a href="/home/ayuroption">
+    <img src="{% static 'home/img/ayur.png' %}" alt="Ayurveda" width="190" height="110" style="margin: 30px;">
+  </a>
+  
+</div>
+     <div class="img">
+  <a href="/home/siddhaoption">
+    <img src="{% static 'home/img/sid.png' %}" alt="Sidhha" width="190" height="110"style="margin: 30px;">
+  </a>
+  
+</div>
+       <div class="img">
+  <a href="/home/unani">
+    <img src="{% static 'home/img/una.png' %}" alt="Unani" width="190" height="110"style="margin: 30px;">
+  </a>
+  
+</div>
+     
+
+     </div>
+  
+    </div>
+  <!-- History Section -->
+   <div class="w3-padding-64 w3-content w3-text-black " id="photos">
+    
+     <h1 class="w3-text-black w3-content w3-justify w3-text-black">Explore:</h1>
+     <hr style="width:200px" class="w3-opacity">
+     <div class="img">
+  <a href="/home/history">
+    <img src="{% static 'home/img/logo.jpeg' %}" alt="History" width="110" height="90">
+  </a>
+  
+</div>
+<div class="img">
+  <a href="/home/time">
+    <img src="{% static 'home/img/time.png' %}" alt="Time" width="110" height="90">
+  </a>
+  
+</div>
+<div class="img">
+  <a href="/home/weight">
+    <img src="{% static 'home/img/weightandmeasure.jpeg' %}" alt="Weight & Measure" width="110" height="90">
+  </a>
+ 
+</div>
+<div class="img">
+  <a href="/home/length">
+    <img src="{% static 'home/img/linear.png' %}" alt="Linear" width="110" height="90">
+  </a>
+  
+</div>
+<div class="img">
+  <a href="/home/contact">
+    <img src="{% static 'home/img/ask.png' %}" alt="Linear" width="110" height="90">
+  </a>
+  
+</div>
+
+
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-padding-64 w3-content w3-text-black" id="contact">
+    <h1 class="w3-text-black w3-content w3-justify w3-text-black" style="margin-top: 100px">Contact Us:</h1>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i><a href="https://www.google.co.in/maps/place/SKIT/@26.8230523,75.8651642,17z/data=!3m1!4b1!4m5!3m4!1s0x396db770070b115f:0x6f306afd08a3e737!8m2!3d26.8230475!4d75.8673529" target="_blank">SKIT ,Jaipur</a></p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: 04045967059</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email:info@skit.com</p>
+    </div><br>
+
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-black w3-xxxlarge">
+   <a href="https://m.facebook.com/skitjaipurdeals/"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    <p class="w3-medium w3-large">------------------------------------------------------Powered by TECHNOCRATS--------------------------------------------------</p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+</div>
+
+</body>
+</html>

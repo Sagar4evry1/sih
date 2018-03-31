@@ -1,0 +1,675 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<title>Time</title>
+<link rel="icon" href="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" type="image/x-icon">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+ 
+    <script
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
+    </script>
+   
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background:#F39C12;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    body{
+            background-image: url("{% static 'home/img/new.jpg' %}");
+            background-blend-mode:lighten;
+            
+        }
+
+    #vin{
+            
+            backface-visibility: 30%;
+        }
+    h2{
+            color:black;
+      }
+    .text{
+        
+             font-weight:900;
+             font-family: fantasy;
+             font-style: italic;
+    
+        
+         }
+    
+
+      /* .aside{
+           padding-left: 50px;
+        
+           
+           
+           
+       }  
+       .bside{
+           padding-left: 50px;
+        
+       }
+       #ayur{
+           color: black;
+           font-family:inherit;
+           font-size: 25px;
+       }
+        #modern{
+           color: black;
+           font-family: inherit;
+           font-size: 25px;
+       }
+       #inputPounds{
+           background-color:#CEE32C;
+           padding: 2px;
+          
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+       #inputKg{
+             background-color:#CEE32C;
+           padding: 2px;
+           
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+       #chose1{
+              background-color:#CEE32C;
+           padding: 2px;
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }
+        #chose2{
+              background-color:#CEE32C;
+           padding: 2px;
+
+    
+           border-width: medium;
+           font-size: 15px;
+           font-style: oblique;
+           font-family: cursive;
+           color: black;
+       }*/
+    h6{
+        text-align: justify;
+        text-indent: 50px;
+    }
+    div.img {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #0000ff;
+    height: auto;
+    width: auto;
+    float: left;
+    text-align: center;
+}
+
+div.img img {
+    display: inline;
+    margin: 5px;
+    border: 1px solid #ffffff;
+}
+
+
+div.desc {
+    text-align: center;
+    font-weight: normal;
+    width: 120px;
+    margin: 5px;
+}
+</style>
+<body>
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-hide-medium w3-center">
+  <!-- Avatar image in top left corner -->   
+  <a href="/home"><img src="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" style="width:100%"></a>
+  <a href="/home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="/home/#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-cogs w3-xxlarge"></i>
+    <p>Unit converter</p>
+  </a>
+  <a href="/home/#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-search w3-xxlarge"></i>
+    <p>Explore</p>
+  </a>
+  <a href="/home/#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>Contact us</p>
+  </a>
+  <a href="/home/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-male w3-xxlarge"></i>
+    <p>Query</p>
+  </a>
+
+</nav>
+
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Unit Converter</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">Explore</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact us</a>
+  </div>
+</div>
+<div class="w3-center">
+     <h2 class="w3-xxlarge">Weight Converter</h2>
+
+<label class="w3-large">
+    <input class="w3-radio" type="radio" name="radiobutton" value="1" id="button1" checked /> Ayurvedic to Modern</label>
+<label class="w3-large">
+    <input type="radio"class="w3-radio" name="radiobutton" value="2" id="button2" /> Modern to Ayurvedic</label>
+<label class="w3-large">
+    <input type="radio" class="w3-radio"name="radiobutton" value="3" id="button3" /> Ayurvedic to Ayurvedic</label>
+<label class="w3-large">
+    <input type="radio" class="w3-radio"name="radiobutton" value="4" id="button4" /> Modern to Modern</label>
+<!--<script>-->
+<div class="w3-container" style="background:#13111187;margin-left:179px;margin-right: 30px;margin-top: 40px; ">
+    <div class="form-a"  >
+    <p>
+  <label>Ayurveda</label>
+  <input id="form1"class="w3-input w3-border" style="width:20%;margin-left: 440px;" type="number" placeholder="Ayurveda" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)" >
+   <select class="chosen w3-select " style="width: 20%;margin-top:10px; margin-bottom: 20px;" id="form1o" onchange="myfunction()">
+            <option  name="NODI"   value="A">NODI</option>
+            <option name ="NAZIKAI"  value="B">NAZIKAI</option>
+            <option name="MUKURTTAM"   value="C">MUKURTTAM</option>
+            <option  name="YAMAN"  value="D">YAMAN&nbsp;</option>
+        </select>
+</p>
+<label> Modern </label>
+<input id="inputKg" class="w3-input w3-border" style="width:20%;margin-left: 440px;" type="number" placeholder="modern"   disabled>
+<select id="form12o" class=" w3-select " style="width: 20%;margin-top:10px; margin-bottom: 20px;"onchange="myfunction()">
+            <option value="E" selected="yes">Sec</option>
+            <option value="F">min</option>
+             <option value="G">Hr</option>
+        </select>
+
+</div>
+<div class="form-b" style="display: none">
+      <p>
+  <label>Modern</label>
+  <input id="form2"class="w3-input w3-border" style="width:20%;margin-left: 440px;" type="number" placeholder="Modern" oninput="weightConverter1(this.value)" onchange="weightConverter1(this.value)" >
+   <select class="chosen w3-select " style="width: 20%;margin-top:10px; margin-bottom: 20px;" id="form21o" onchange="myfunction1()">
+        <option value="E" selected="yes">Sec</option>
+            <option value="F">min</option>
+             <option value="G">Hr</option>
+
+        </select>
+</p>
+<label> Ayurveda </label>
+<input id="ayu"  class="w3-input w3-border" style="width:20%;margin-left: 440px;"type="number" placeholder="Ayurveda"   disabled>
+<select id="form22o"class=" w3-select " style="width: 20%;margin-top:10px; margin-bottom: 20px;" onchange="myfunction1()">
+           <option  name="NODI"   value="A">NODI</option>
+            <option name ="NAZIKAI"  value="B">NAZIKAI</option>
+            <option name="MUKURTTAM"   value="C">MUKURTTAM</option>
+            <option  name="YAMAN"  value="D">YAMAN&nbsp;</option>
+        </select>
+
+
+    </div>
+
+<div class="form-c" style="display: none" >
+    <p>
+  <label>Ayurveda</label>
+  <input id="form3"class="w3-input w3-border" style="width:20%;margin-left: 440px;" type="number" placeholder="Ayurveda" oninput="weightConverter2(this.value)" onchange="weightConverter2(this.value)" >
+   <select class="chosen w3-select " style="width: 20%;margin-top:10px; margin-bottom: 20px;" id="form31o" onchange="myfunction2()">
+            <option  name="NODI"   value="A">NODI</option>
+            <option name ="NAZIKAI"  value="B">NAZIKAI</option>
+            <option name="MUKURTTAM"   value="C">MUKURTTAM</option>
+            <option  name="YAMAN"  value="D">YAMAN&nbsp;</option>
+        </select>
+</p>
+<label> Modern </label>
+<input id="ayurs" class="w3-input w3-border" style="width:20%;margin-left: 440px;" type="number" placeholder="modern"   disabled>
+<select id="form32o"class=" w3-select " style="width: 20%;margin-top:10px; margin-bottom: 20px;" onchange="myfunction2()">
+              <option  name="NODI"   value="E">NODI</option>
+            <option name ="NAZIKAI"  value="F">NAZIKAI</option>
+            <option name="MUKURTTAM"   value="G">MUKURTTAM</option>
+            <option  name="YAMAN"  value="H">YAMAN&nbsp;</option>
+        </select>
+
+</div>
+
+<div class="form-d" style="display: none" >
+    <p>
+  <label>Ayurveda</label>
+  <input id="form4"class="w3-input w3-border" style="width:20%;margin-left: 440px;" type="number" placeholder="Ayurveda" oninput="weightConverter3(this.value)" onchange="weightConverter3(this.value)" >
+   <select class="chosen w3-select " style="width: 20%;margin-top:10px; margin-bottom: 20px;" id="form41o" onchange="myfunction3()">
+             <option value="E" selected="yes">Sec</option>
+            <option value="F">min</option>
+             <option value="G">Hr</option>
+        </select>
+</p>
+<label> Modern </label>
+<input id="ayurss" class="w3-input w3-border" style="width:20%;margin-left: 440px;" type="number" placeholder="modern"   disabled>
+<select id="form42o" class="w3-select " style="width: 20%;margin-top:10px; margin-bottom: 20px;"onchange="myfunction3()">
+              <option value="A" selected="yes">Sec</option>
+            <option value="B">min</option>
+             <option value="C">Hr</option>
+        </select>
+
+</div>
+
+</div>
+</div>
+
+
+<script>
+$(document).ready(function() {
+  $('input[name=radiobutton]:radio').change(function(e) {
+    let value = e.target.value.trim()
+
+    $('[class^="form"]').css('display', 'none');
+
+    switch (value) {
+      case '1':
+        $('.form-a').show()
+        break;
+      case '2':
+        $('.form-b').show()
+        break;
+        case '3':
+        $('.form-c').show()
+        break;
+        case '4':
+        $('.form-d').show()
+        break;
+
+
+    }
+  })
+})
+
+function weightConverter(valNum) {
+
+
+var choseval = $("#form1o").val();
+if(choseval == "A"){
+var convert=document.getElementById("form12o").value;
+if(convert=="E")
+{
+document.getElementById("inputKg").value=valNum*1;
+}
+if(convert=="F")
+{
+document.getElementById("inputKg").value=valNum*0.01666;
+}
+if(convert=="G")
+{
+document.getElementById("inputKg").value=valNum*0.00027777;
+}
+}
+if(choseval == "B"){
+var convert=document.getElementById("form12o").value;
+if(convert=="E")
+{
+document.getElementById("inputKg").value=valNum*1440;
+}
+if(convert=="F")
+{
+document.getElementById("inputKg").value=valNum*24;
+}
+if(convert=="G")
+{
+document.getElementById("inputKg").value=valNum*0.4;
+}
+}
+if(choseval == "C"){
+var convert=document.getElementById("form12o").value;
+if(convert=="E")
+{
+document.getElementById("inputKg").value=valNum*5400;
+}
+if(convert=="F")
+{
+document.getElementById("inputKg").value=valNum*90.666;
+}
+if(convert=="G")
+{
+document.getElementById("inputKg").value=valNum*1.5111;
+}
+}
+if(choseval == "D"){
+var convert=document.getElementById("form12o").value;
+if(convert=="E")
+{
+document.getElementById("inputKg").value=valNum*10800;
+}
+if(convert=="F")
+{
+document.getElementById("inputKg").value=valNum*180;
+}
+if(convert=="G")
+{
+document.getElementById("inputKg").value=valNum*3;
+}
+}
+}
+
+
+
+
+function weightConverter1(valNum) {
+
+var choseval = $("#form21o").val();
+if(choseval == "E"){
+var convert=document.getElementById("form22o").value;
+if(convert=="A")
+{
+document.getElementById("ayu").value=valNum/1;
+}
+if(convert=="B")
+{
+document.getElementById("ayu").value=valNum/1440;
+}
+if(convert=="C")
+{
+document.getElementById("ayu").value=valNum/5400;
+}
+if(convert=="D")
+{
+document.getElementById("ayu").value=valNum/10800;
+}
+}
+
+if(choseval == "F"){
+var convert=document.getElementById("form22o").value;
+if(convert=="A")
+{
+document.getElementById("ayu").value=valNum/0.01666;
+}
+if(convert=="B")
+{
+document.getElementById("ayu").value=valNum/24;
+}
+if(convert=="C")
+{
+document.getElementById("ayu").value=valNum/90.666;
+}
+if(convert=="D")
+{
+document.getElementById("ayu").value=valNum/180;
+}
+}
+
+if(choseval == "G"){
+var convert=document.getElementById("form22o").value;
+if(convert=="A")
+{
+document.getElementById("ayu").value=valNum/0.0002777;
+}
+if(convert=="B")
+{
+document.getElementById("ayu").value=valNum/0.4;
+}
+if(convert=="C")
+{
+document.getElementById("ayu").value=valNum/1.5111;
+}
+if(convert=="D")
+{
+document.getElementById("ayu").value=valNum/3;
+}
+}
+}
+
+function weightConverter2(valNum) {
+
+
+var choseval = $("#form31o").val();
+if(choseval == "A"){
+var convert=document.getElementById("form32o").value;
+if(convert=="E")
+{
+document.getElementById("ayurs").value=valNum*1;
+}
+if(convert=="F")
+{
+
+document.getElementById("ayurs").value=valNum*0.0007142;
+}
+if(convert=="G")
+{
+document.getElementById("ayurs").value=valNum*0.0001851;
+}
+if(convert=="H")
+{
+document.getElementById("ayurs").value=valNum*0.00009259;
+}
+}
+if(choseval == "B"){
+var convert=document.getElementById("form32o").value;
+if(convert=="E")
+{
+document.getElementById("ayurs").value=valNum*1440;
+}
+if(convert=="F")
+{
+document.getElementById("ayurs").value=valNum*1;
+}
+if(convert=="G")
+{
+document.getElementById("ayurs").value=valNum*0.26666;
+}
+if(convert=="H")
+{
+document.getElementById("ayurs").value=valNum*0.13333;
+}
+}
+if(choseval == "C"){
+var convert=document.getElementById("form32o").value;
+if(convert=="E")
+{
+document.getElementById("ayurs").value=valNum*5400;
+}
+if(convert=="F")
+{
+document.getElementById("ayurs").value=valNum*3.15;
+}
+if(convert=="G")
+{
+document.getElementById("ayurs").value=valNum*1;
+}
+if(convert=="H")
+{
+document.getElementById("ayurs").value=valNum*0.5;
+}
+}
+if(choseval == "D"){
+var convert=document.getElementById("form32o").value;
+if(convert=="E")
+{
+document.getElementById("ayurs").value=valNum*10800;
+}
+if(convert=="F")
+{
+document.getElementById("ayurs").value=valNum*7.5;
+}
+if(convert=="G")
+{
+document.getElementById("ayurs").value=valNum*2;
+}
+if(convert=="H")
+{
+document.getElementById("ayurs").value=valNum*1;
+}
+}
+}
+
+
+function weightConverter3(valNum) {
+
+var choseval = $("#form41o").val();
+if(choseval == "E"){
+var convert=document.getElementById("form42o").value;
+if(convert=="A")
+{
+document.getElementById("ayurss").value=valNum*1;
+}
+if(convert=="B")
+{
+document.getElementById("ayurss").value=valNum*0.0166;
+}
+if(convert=="C")
+{
+document.getElementById("ayurss").value=valNum*0.0002777;
+}
+
+}
+
+if(choseval == "F"){
+var convert=document.getElementById("form42o").value;
+if(convert=="A")
+{
+document.getElementById("ayurss").value=valNum*60;
+}
+if(convert=="B")
+{
+document.getElementById("ayurss").value=valNum/1;
+}
+if(convert=="C")
+{
+document.getElementById("ayurss").value=valNum*(0.01666);
+}
+
+}
+
+if(choseval == "G"){
+var convert=document.getElementById("form42o").value;
+if(convert=="A")
+{
+document.getElementById("ayurss").value=valNum*3600;
+}
+if(convert=="B")
+{
+document.getElementById("ayurss").value=valNum*60;
+}
+if(convert=="C")
+{
+document.getElementById("ayurss").value=valNum*1;
+}
+
+}
+}
+
+
+function  myfunction(){
+var value1 = $("#form1").val();
+weightConverter(value1);
+}
+
+function  myfunction1(){
+document.getElementById("ayu").value=null;
+document.getElementById("form2").value=null;
+
+}
+function  myfunction2(){
+document.getElementById("form3").value=null;
+document.getElementById("ayurs").value=null;
+
+}
+
+function  myfunction3(){
+document.getElementById("form4").value=null;
+document.getElementById("ayurss").value=null;
+
+}
+</script>
+  <!-- History Section -->
+   <div class="w3-padding-64 w3-content w3-text-black " id="photos">
+    
+     <h1 class="w3-text-black w3-content w3-justify w3-text-black">Explore:</h1>
+     <hr style="width:200px" class="w3-opacity">
+     <div class="img">
+  <a href="/home/history">
+    <img src="{% static 'home/img/logo.jpeg' %}" alt="History" width="110" height="90">
+  </a>
+  
+</div>
+<div class="img">
+  <a href="/home/time">
+    <img src="{% static 'home/img/time.png' %}" alt="Time" width="110" height="90">
+  </a>
+  
+</div>
+<div class="img">
+  <a href="/home/weight">
+    <img src="{% static 'home/img/weightandmeasure.jpeg' %}" alt="Weight & Measure" width="110" height="90">
+  </a>
+ 
+</div>
+<div class="img">
+  <a href="/home/length">
+    <img src="{% static 'home/img/linear.png' %}" alt="Linear" width="110" height="90">
+  </a>
+  
+</div>
+<div class="img">
+  <a href="/home/conatct">
+    <img src="{% static 'home/img/ask.png' %}" alt="Linear" width="110" height="90">
+  </a>
+  
+</div>
+
+
+  </div>
+
+
+
+  </div>
+   <div class="w3-padding-64 w3-content w3-text-black" id="contact">
+    <h1 class="w3-text-black w3-content w3-justify w3-text-black" style="margin-top: 100px">Contact Us:</h1>
+    <hr style="width:200px" class="w3-opacity">
+
+    <div class="w3-section">
+        <p><i class="fa fa-map-marker fa-fw w3-text-black w3-xxlarge w3-margin-right"></i><a href="https://www.google.co.in/maps/place/SKIT/@26.8230523,75.8651642,17z/data=!3m1!4b1!4m5!3m4!1s0x396db770070b115f:0x6f306afd08a3e737!8m2!3d26.8230475!4d75.8673529" target="_blank">SKIT ,Jaipur</a></p>
+      <p><i class="fa fa-phone fa-fw w3-text-black w3-xxlarge w3-margin-right"></i> Phone: 1800-200-5111</p>
+      <p><i class="fa fa-envelope fa-fw w3-text-black w3-xxlarge w3-margin-right"> </i> Email: info@skit.com</p>
+    </div><br>
+
+  <!-- End Contact Section -->
+  </div>
+  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-black w3-xlarge">
+   <a href="https://m.facebook.com/skitjaipurdeals/"> <i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-black">TECHNOCRATS</a></p>
+  <!-- End footer -->
+  </footer>
+
+<!-- END PAGE CONTENT -->
+
+
+
+
+</body>
+</html>

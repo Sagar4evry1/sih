@@ -1,0 +1,118 @@
+{% load  static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+       <link href="css/bootstrap.min.css" rel="stylesheet">
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+       <script type="text/javascript" src="ayur.js"></script>
+       <script
+        src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCJnj2nWoM86eU8Bq2G4lSNz3udIkZT4YY&sensor=false">
+       </script>
+   
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background-color: #CFE507;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+    body{
+            background-image: url("{% static 'home/img/new.jpg' %}");
+            background-blend-mode:lighten;
+    
+        }
+
+    .table{
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+    
+    
+    
+      </style>  
+    
+
+    
+  
+
+    <title>History</title>
+  </head>
+  <body>
+   <!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <a href="/home"><img src="{% static 'home/img/original-logos_2018_Mar_8391-5ab14a07d934d.png' %}" style="width:100%"></a>
+  <a href="/home" class="w3-bar-item w3-button w3-padding-large w3-hover-green">
+    <i class="fa fa-home w3-xlarge"></i>
+    <p>Home</p>
+  </a>
+  <a href="/home/#about" class="w3-bar-item w3-button w3-padding-large w3-hover-green">
+    <i class="fa fa-cogs w3-xlarge"></i>
+    <p>Unit Conveter</p>
+  </a>
+  <a href="/home/#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-green">
+    <i class="fa fa-search w3-xlarge"></i>
+    <p>Explore</p>
+  </a>
+  <a href="/home/#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-green">
+    <i class="fa fa-envelope w3-xlarge"></i>
+    <p>Contact us</p>
+  </a>
+   <a href="/home/contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black ">
+    <i class="fa fa-male w3-xlarge"></i>
+    <p>Ask Query</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="/home" class="w3-bar-item w3-button" style="width:25% !important">Home</a>
+    <a href="/home/#about" class="w3-bar-item w3-button" style="width:25% !important">Unit Converter</a>
+    <a href="/home/#photos" class="w3-bar-item w3-button" style="width:25% !important">Explore</a>
+    <a href="/home/#contact" class="w3-bar-item w3-button" style="width:25% !important">Contact us</a>
+    <a href="/home/contact" class="w3-bar-item w3-button" style="width:25% !important">Ask Query</a>
+  </div>
+</div>
+   <div class="w3-content w3-justify w3-text-black w3-padding-64">
+       <h1>History of Ayurveda:</h1>
+       <iframe width="1080" height="400"
+src="https://www.youtube.com/embed/MBJW8ouHYFM?autoplay=1">
+</iframe>
+   </div>
+    
+
+   
+       <div class="w3-content w3-justify w3-text-black w3-padding-64 w3-mobile" style="background:#CFE507">
+            <p>
+        <i class="fa fa-check"></i>
+        
+         Ayurveda is an ancient system of life (ayur) knowledge (veda) arising in India thousands of years ago. Ayurveda theory evolved from a deep understanding of creation. The great rishis or seers of ancient India came to understand creation through deep meditation and other spiritual practices. The rishis sought to reveal the deepest truths of human physiology and health. They observed the fundamentals of life, organized them into an
+           elaborate system, and compiled India's philosophical and spiritual texts, called Veda of knowledge.<br><br><br><br><i class="fa fa-check"></i>
+            Ayurveda was first recorded in the Veda, the world's oldest existing literature. The three most important Veda texts containing the original and complete knowledge of Ayurveda, believed to be over 1200 years old, is still in use today. These Ayurvedic teachings were customarily passed on orally from teacher to student for over 1000 years. The wisdom of Ayurveda is recorded in Sanskrit, the ancient language of India that reflects the philosophy behind Ayurveda and the depth within it. <br><br><br><br>
+<i class="fa fa-check"></i>
+Ayurveda greatly influenced health care practices in the east and the west. By 400 AD Ayurvedic works were translated into Chinese; by 700 AD Chinese scholars were studying medicine in India at Nalanda University. Chinese medicine, herbology and Buddhist philosophy were also impacted by Ayurvedic knowledge. Having passed the test of experience it remains essentially the same now as at its inception, although numerous commentators over the centuries have added insight with their analyses.<br><br><br><br><i class="fa fa-check"></i>
+
+The philosophy of Ayurveda teaches a series of conceptual systems characterized by balance and disorder, health and disease. Disease/health results from the interconnectedness between the self, personality, and everything that occurs in the mental, emotional, and spiritual being. To be healthy, harmony must exist between the purpose for healing, thoughts, feelings and physical action.<br><br><br><br><i class="fa fa-check"></i>
+
+Ayurveda is a careful integration of six important Indian philosophical systems, many physical/behavioral sciences, and the medical arts. One verse from an ancient authority says Ayurveda deals with what is good life and bad life, happiness and misery, that which supports or destroys, and the measurement of life. It works to heal the sick, to maintain health in the healthy, and to prevent disease in order to promote quality of life and long life. Health is defined as an experience of bliss/happiness in the soul, mind, and senses and balance of the body's three governing principles, seven tissues, three wastes, digestion, and other processes such as immune functioning. Health is not the absence of symptoms. Ayurveda has objective ways to assess each of these, pulse assessment being the primary means.<br><br><br><br><i class="fa fa-check"></i>
+
+Its central tenet is that life is a combination of body, mind, senses, and spirit (more than a mind-body system). Nothing exists but for the pre-existence of and working of a Supreme Intelligence/Consciousness – an elemental, all-powerful, all-pervading spirit-energy that expresses Itself through and in the creation. Ayurveda seeks to know this aspect of life, the subjective (internal) as well as the objective (outer). <br><br><br><br><i class="fa fa-check"></i>
+
+It is central to Ayurveda that the functioning of all creation, the mineral, plant and animal kingdoms, can be understood as the interactions of three fundamental energy complexes (erroneously called doshas). The three energies are vata, pitta and kapha – signifying the dynamic or mobile, energetic, nonmaterial aspect of nature; the transformative, intelligence aspect; and the structural, physical aspect respectively. Vata governs respiration, circulation, elimination, locomotion, movement, speech, creativity, enthusiasm, and the entire nervous system. Pitta governs transformations such as digestion and metabolism, vision, complexion, body temperature, courage, cheerfulness, intellection and discrimination. Kapha governs growth (anabolic processes), lubrication, fluid secretions, binding, potency, patience, heaviness, fluid balance, compassion, and understanding in the organism. All have physical expressions in the body.
+      </p>
+       </div>
+   
+    </body>
+</html>
